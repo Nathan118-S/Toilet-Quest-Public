@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toilet Quest Privacy Policy</title>
+<meta name="description" content="How Toilet Quest handles your data.">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: one readable column; a short "at a glance" panel up top, then the full policy. */
+:root {
+  --bg: #ffffff;
+  --surface: #f4f6fa;
+  --fg: #12151c;
+  --muted: #5b6372;
+  --line: #e2e7ef;
+  --accent: #007aff;
+  --accent-soft: #e8f1ff;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0f14; --surface: #171a22; --fg: #eef1f6; --muted: #9aa3b2;
+    --line: #262b36; --accent: #0a84ff; --accent-soft: #11233d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0f14; --surface: #171a22; --fg: #eef1f6; --muted: #9aa3b2;
+  --line: #262b36; --accent: #0a84ff; --accent-soft: #11233d; color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+}
+main { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+
+header { display: flex; flex-direction: column; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; }
+.brand svg { width: 40px; height: 40px; flex: none; }
+h1 { margin: 0; font-size: clamp(32px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; text-wrap: balance; }
+.meta { color: var(--muted); font-size: 14px; }
+
+.glance { background: var(--accent-soft); border-radius: 14px; padding: 22px 24px; }
+.glance h2 { margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.glance ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+
+section { display: flex; flex-direction: column; gap: 10px; }
+h2 { margin: 0; font-size: 22px; letter-spacing: -0.01em; text-wrap: balance; }
+h3 { margin: 6px 0 0; font-size: 17px; }
+p, li { color: var(--fg); }
+p { margin: 0; }
+ul { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+.muted { color: var(--muted); }
+
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+th { background: var(--surface); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: none; }
+td:first-child { font-weight: 600; white-space: nowrap; }
+
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: var(--surface); border-radius: 14px; padding: 18px 20px; }
+.email { font-weight: 600; font-size: 17px; user-select: all; }
+button {
+  font: 600 14px var(--font); color: #fff; background: var(--accent);
+  border: 0; border-radius: 10px; padding: 9px 14px; cursor: pointer;
+}
+button:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+a { color: var(--accent); }
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+
+<main>
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5BC0FF"/><stop offset="1" stop-color="#3341DB"/></linearGradient></defs>
+        <rect width="40" height="40" rx="9" fill="url(#g)"/>
+        <path fill="#fff" d="M11.5 11h6.4c1 0 1.6.6 1.6 1.4v7.3h-9.5v-7.3c0-.8.6-1.4 1.5-1.4Zm-2.6 10h22.2c.6 0 1 .5.9 1-.7 3.6-3.3 6.1-6.6 6.9l.4 2.2c.1.5-.3.9-.8.9h-8.2c-.5 0-.9-.4-.8-.9l.5-2.4c-3.1-1-5.4-3.6-6-6.8-.1-.5.3-.9.8-.9Z"/>
+      </svg>
+      Toilet Quest
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective November 15, 2026 · Applies to the Toilet Quest iPhone and iPad app and the Toilet Quest App Clip</div>
+  </header>
+
+  <div class="glance" role="note" aria-label="Summary">
+    <h2>At a glance</h2>
+    <ul>
+      <li>We don't collect your data. Toilet Quest has no servers of its own, and the developer can't see your bathrooms, ratings or account.</li>
+      <li>Your data is stored on your device and, if you sign in, in your own private iCloud account. Most of it is end-to-end encrypted.</li>
+      <li>Your bathrooms are shared only with friends you approve, or with people you send a share link to.</li>
+      <li>There are no ads, no analytics and no tracking.</li>
+      <li>You can delete everything at any time in the app: Profile ▸ Delete Account.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>Who we are</h2>
+    <p>Toilet Quest is developed by Nathan Sandy ("we", "us"). If you have any questions about this policy or your data, email <strong>support@nathan-net.com</strong>.</p>
+  </section>
+
+  <section>
+    <h2>What the app stores and where</h2>
+    <p>Toilet Quest is built so that your information stays with you. Here is everything the app handles:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Information</th><th>Why</th><th>Where it's kept</th></tr></thead>
+        <tbody>
+          <tr><td>Sign in with Apple ID</td><td>To identify your account. Apple may provide your name and email, or a private relay email, the first time you sign in.</td><td>Only in your device's Keychain. It is never sent to us.</td></tr>
+          <tr><td>Bathrooms and ratings</td><td>The places you add, their amenities, your star ratings and any notes you write.</td><td>On your device. If you're signed in, also in your private iCloud.</td></tr>
+          <tr><td>Profile</td><td>Your display name, emoji and optional profile photo, shown to friends you approve.</td><td>On your device and in your private iCloud.</td></tr>
+          <tr><td>Location</td><td>To center the map on you and to place new bathrooms. Your live location is never stored or uploaded.</td><td>Used on your device only. A bathroom you add keeps the location you choose for it.</td></tr>
+          <tr><td>Camera</td><td>Only to scan a friend's QR code. No photos or video are saved.</td><td>Not stored.</td></tr>
+          <tr><td>Friends list</td><td>Who you're connected with.</td><td>On your device. Friend connections use iCloud sharing.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">If you use Toilet Quest without signing in (guest mode), everything stays on your device only and nothing is synced or shared.</p>
+  </section>
+
+  <section>
+    <h2>iCloud and encryption</h2>
+    <p>When you're signed in, Toilet Quest uses Apple's CloudKit to store your data in your <em>private</em> iCloud database, which belongs to your iCloud account. The app never uses a public database. The details of your bathrooms, ratings and profile are stored in CloudKit's encrypted fields, which are end-to-end encrypted with keys from your iCloud account, and photos are stored as encrypted iCloud assets. We cannot access your private iCloud data. This storage is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>Sharing with friends</h2>
+    <ul>
+      <li><strong>Only after both people accept.</strong> When you and a friend accept each other's request, you can see each other's bathrooms, ratings, display name, emoji and profile photo through iCloud sharing.</li>
+      <li><strong>Invite codes and links.</strong> Your QR code or invite link lets the person you give it to send you a friend request. A request contains their display name, emoji and the links needed to connect. Anyone who has your invite link may also be able to see other pending requests sent to you, so only share it with people you know.</li>
+      <li><strong>Removing a friend</strong> immediately removes their bathrooms from your map and stops them from seeing yours.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Share links and the App Clip</h2>
+    <p>When you tap Share Link on a bathroom, the link itself contains that bathroom's name, location, ratings and amenities, and your display name. Anyone who receives the link can open it in the Toilet Quest App Clip or the app, without an account. We don't receive or store these links. Only share a bathroom with people you're happy to show it to. The App Clip only displays the shared bathroom; it doesn't collect or store any information.</p>
+  </section>
+
+  <section>
+    <h2>Third parties</h2>
+    <p>Toilet Quest contains no third-party analytics, advertising or tracking code, and we don't sell or rent data. The app relies only on Apple services: Sign in with Apple, iCloud/CloudKit, and Apple Maps for the map and directions. Apple Maps may receive your location to show the map and give directions, as described in Apple's Privacy Policy. When you share a bathroom, it goes to the apps you choose (for example Messages), under their own policies.</p>
+  </section>
+
+  <section>
+    <h2>Keeping and deleting your data</h2>
+    <ul>
+      <li><strong>Delete Account</strong> (Profile ▸ Delete Account) erases all Toilet Quest data on your device and in your iCloud, removes you from your friends' maps, and signs you out.</li>
+      <li><strong>Exit Guest Mode</strong> deletes bathrooms saved as a guest.</li>
+      <li>Deleting the app removes its data from your device; data in your iCloud stays until you delete your account in the app.</li>
+      <li>To stop using your Apple ID with Toilet Quest, go to Settings ▸ [your name] ▸ Sign in with Apple.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Your rights</h2>
+    <p>Depending on where you live (for example under the GDPR in the EU and UK, or the CCPA in California), you have rights to access, correct, delete and move your personal data. Because your data is held on your device and in your own iCloud account, you can exercise these rights directly in the app: view and edit your bathrooms and profile, or delete everything with Delete Account. If you need help, contact us and we'll respond within 30 days.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>Toilet Quest is not directed at children under 13, and we don't knowingly collect personal information from children. Because the app doesn't send personal information to us, we hold no such information.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If we change how Toilet Quest handles data, we'll update this page and the effective date above. Significant changes will also be noted in the app's release notes.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <span class="email" id="email">support@nathan-net.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+  </section>
+
+  <footer>© 2026 Nathan Sandy · Toilet Quest</footer>
+</main>
+
+<script>
+document.getElementById('copy').addEventListener('click', async (e) => {
+  const btn = e.currentTarget;
+  try {
+    await navigator.clipboard.writeText('support@nathan-net.com');
+    btn.textContent = 'Copied';
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(document.getElementById('email'));
+    const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    btn.textContent = 'Selected — press ⌘C';
+  }
+  setTimeout(() => { btn.textContent = 'Copy email'; }, 2000);
+});
+</script>
+
+</body>
+</html>
