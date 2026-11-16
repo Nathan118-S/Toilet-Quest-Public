@@ -91,14 +91,14 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
       Toilet Quest
     </div>
     <h1>Privacy Policy</h1>
-    <div class="meta">Effective November 15, 2026 · Applies to the Toilet Quest iPhone and iPad app and the Toilet Quest App Clip</div>
+    <div class="meta">Effective November 16, 2026 · Applies to the Toilet Quest iPhone and iPad app and the Toilet Quest App Clip</div>
   </header>
 
   <div class="glance" role="note" aria-label="Summary">
     <h2>At a glance</h2>
     <ul>
       <li>We don't collect your data. Toilet Quest has no servers of its own, and the developer can't see your bathrooms, ratings or account.</li>
-      <li>Your data is stored on your device and, if you sign in, in your own private iCloud account. Most of it is end-to-end encrypted.</li>
+      <li>Your data is stored on your device and, if you sign in, backed up through Apple's iCloud. It's encrypted on your device first, so neither we nor anyone else can read it, and it doesn't use your iCloud storage.</li>
       <li>Your bathrooms are shared only with friends you approve, or with people you send a share link to.</li>
       <li>There are no ads, no analytics and no tracking.</li>
       <li>You can delete everything at any time in the app: Profile ▸ Delete Account.</li>
@@ -118,11 +118,12 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
         <thead><tr><th>Information</th><th>Why</th><th>Where it's kept</th></tr></thead>
         <tbody>
           <tr><td>Sign in with Apple ID</td><td>To identify your account. Apple may provide your name and email, or a private relay email, the first time you sign in.</td><td>Only in your device's Keychain. It is never sent to us.</td></tr>
-          <tr><td>Bathrooms and ratings</td><td>The places you add, their amenities, your star ratings and any notes you write.</td><td>On your device. If you're signed in, also in your private iCloud.</td></tr>
-          <tr><td>Profile</td><td>Your display name, emoji and optional profile photo, shown to friends you approve.</td><td>On your device and in your private iCloud.</td></tr>
+          <tr><td>Bathrooms and ratings</td><td>The places you add, their amenities, your star ratings and any notes you write.</td><td>On your device. If you're signed in, also as an encrypted backup in iCloud (see below).</td></tr>
+          <tr><td>Profile</td><td>Your display name, emoji and optional profile photo, shown to friends you approve.</td><td>On your device and as an encrypted backup in iCloud.</td></tr>
+          <tr><td>Door codes</td><td>Codes you save for code-locked bathrooms.</td><td>On your device and in iCloud, encrypted with a key only your devices have. A code you choose to share is visible to your friends.</td></tr>
           <tr><td>Location</td><td>To center the map on you and to place new bathrooms. Your live location is never stored or uploaded.</td><td>Used on your device only. A bathroom you add keeps the location you choose for it.</td></tr>
           <tr><td>Camera</td><td>Only to scan a friend's QR code. No photos or video are saved.</td><td>Not stored.</td></tr>
-          <tr><td>Friends list</td><td>Who you're connected with.</td><td>On your device. Friend connections use iCloud sharing.</td></tr>
+          <tr><td>Friends list</td><td>Who you're connected with.</td><td>On your device. Each connection is also stored in iCloud (see below).</td></tr>
         </tbody>
       </table>
     </div>
@@ -131,15 +132,16 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
 
   <section>
     <h2>iCloud and encryption</h2>
-    <p>When you're signed in, Toilet Quest uses Apple's CloudKit to store your data in your <em>private</em> iCloud database, which belongs to your iCloud account. The app never uses a public database. The details of your bathrooms, ratings and profile are stored in CloudKit's encrypted fields, which are end-to-end encrypted with keys from your iCloud account, and photos are stored as encrypted iCloud assets. We cannot access your private iCloud data. This storage is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+    <p>When you're signed in, Toilet Quest stores your data with Apple's CloudKit, in the app's own iCloud database. This doesn't use your iCloud storage, so it works even when your iCloud is full. Before anything leaves your device, the app encrypts it with keys that only you have (bathrooms, ratings, profile and photo are also readable by friends you accept; door codes only by you). The keys are kept in your iCloud Keychain, which Apple end-to-end encrypts. Neither we nor Apple nor other users can read your encrypted data.</p>
+    <p>To make syncing and friend connections work, a few technical details are stored without encryption: a random ID for your account that's specific to this app (it isn't your Apple ID, name or email), which of these IDs are connected as friends or have sent a request, your public encryption key, how many items you've stored, and when they were changed. Other Toilet Quest users could technically see these details for an ID they know, but not anything you've written. This storage is provided by Apple and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
   </section>
 
   <section>
     <h2>Sharing with friends</h2>
     <ul>
-      <li><strong>Only after both people accept.</strong> When you and a friend accept each other's request, you can see each other's bathrooms, ratings, display name, emoji and profile photo through iCloud sharing.</li>
-      <li><strong>Invite codes and links.</strong> Your QR code or invite link lets the person you give it to send you a friend request. A request contains their display name, emoji and the links needed to connect. Anyone who has your invite link may also be able to see other pending requests sent to you, so only share it with people you know.</li>
-      <li><strong>Removing a friend</strong> immediately removes their bathrooms from your map and stops them from seeing yours.</li>
+      <li><strong>Only after both people accept.</strong> When you and a friend accept each other's request, your apps exchange keys so you can see each other's bathrooms, ratings, display name, emoji and profile photo. Nobody else can read them.</li>
+      <li><strong>Invite codes and links.</strong> Your QR code or invite link contains your account's random app ID and the display name and emoji you chose, so the person you give it to can send you a friend request. Only share it with people you know.</li>
+      <li><strong>Removing a friend</strong> immediately removes their bathrooms from your map. Your app also switches to new encryption keys, so they can't see anything you add or change afterwards.</li>
     </ul>
   </section>
 
@@ -156,16 +158,16 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
   <section>
     <h2>Keeping and deleting your data</h2>
     <ul>
-      <li><strong>Delete Account</strong> (Profile ▸ Delete Account) erases all Toilet Quest data on your device and in your iCloud, removes you from your friends' maps, and signs you out.</li>
+      <li><strong>Delete Account</strong> (Profile ▸ Delete Account) erases all Toilet Quest data on your device and everything you've stored in iCloud through the app, including your keys, removes you from your friends' maps, and signs you out.</li>
       <li><strong>Exit Guest Mode</strong> deletes bathrooms saved as a guest.</li>
-      <li>Deleting the app removes its data from your device; data in your iCloud stays until you delete your account in the app.</li>
+      <li>Deleting the app removes its data from your device; your encrypted backup stays in iCloud until you delete your account in the app.</li>
       <li>To stop using your Apple ID with Toilet Quest, go to Settings ▸ [your name] ▸ Sign in with Apple.</li>
     </ul>
   </section>
 
   <section>
     <h2>Your rights</h2>
-    <p>Depending on where you live (for example under the GDPR in the EU and UK, or the CCPA in California), you have rights to access, correct, delete and move your personal data. Because your data is held on your device and in your own iCloud account, you can exercise these rights directly in the app: view and edit your bathrooms and profile, or delete everything with Delete Account. If you need help, contact us and we'll respond within 30 days.</p>
+    <p>Depending on where you live (for example under the GDPR in the EU and UK, or the CCPA in California), you have rights to access, correct, delete and move your personal data. Because your data is held on your device and encrypted with your own keys, you can exercise these rights directly in the app: view and edit your bathrooms and profile, or delete everything with Delete Account. If you need help, contact us and we'll respond within 30 days.</p>
   </section>
 
   <section>
